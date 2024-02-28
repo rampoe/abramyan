@@ -8,7 +8,7 @@ int main()
   std::cin >> x;
 
   std::cout << "y = ";
-  if (x < -2 && x > 2)
+  if (x < -2 || x > 2)
   {
     std::cout << 2 * x << std::endl;
   }
