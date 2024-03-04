@@ -58,5 +58,7 @@ int main()
     break;
   }
 
+  std::cout << d << " " << m << std::endl;
+
   return 0;
 }
