@@ -20,20 +20,20 @@ int main()
   // switch case based on the value of c
   switch (c)
   {
-  case 'С':
-    // nested switch case based on the value of n when c is 'С'
+  case 'S':
+    // nested switch case based on the value of n when c is 'S'
     switch (n)
     {
     case 0:
-      std::cout << 'С' << std::endl;
+      std::cout << 'S' << std::endl;
       break;
 
     case 1:
-      std::cout << 'З' << std::endl;
+      std::cout << 'Z' << std::endl;
       break;
 
     case -1:
-      std::cout << 'В' << std::endl;
+      std::cout << 'V' << std::endl;
       break;
 
     default:
@@ -42,20 +42,20 @@ int main()
     }
     break;
 
-  case 'З':
-    // nested switch case based on the value of n when c is 'З'
+  case 'Z':
+    // nested switch case based on the value of n when c is 'Z'
     switch (n)
     {
     case 0:
-      std::cout << 'З' << std::endl;
+      std::cout << 'Z' << std::endl;
       break;
 
     case 1:
-      std::cout << 'Ю' << std::endl;
+      std::cout << 'Y' << std::endl;
       break;
 
     case -1:
-      std::cout << 'С' << std::endl;
+      std::cout << 'S' << std::endl;
       break;
 
     default:
@@ -64,24 +64,45 @@ int main()
     }
     break;
 
-  case 'В':
-    // nested switch case based on the value of n when c is 'В'
+  case 'V':
+    // nested switch case based on the value of n when c is 'V'
     switch (n)
     {
     case 0:
-      std::cout << 'В' << std::endl;
+      std::cout << 'V' << std::endl;
       break;
 
     case 1:
-      std::cout << 'С' << std::endl;
+      std::cout << 'S' << std::endl;
       break;
 
     case -1:
-      std::cout << 'Ю' << std::endl;
+      std::cout << 'Y' << std::endl;
       break;
 
     default:
       std::cout << "error" << std::endl;
+    }
+    break;
+
+  case 'Y':
+    switch (n)
+    {
+    case 0:
+      std::cout << 'Y' << std::endl;
+      break;
+
+    case 1:
+      std::cout << 'V' << std::endl;
+      break;
+
+    case -1:
+      std::cout << 'Z' << std::endl;
+      break;
+
+    default:
+      std::cout << "error" << std::endl;
+      break;
     }
     break;
 
