@@ -1,5 +1,8 @@
-#include<bits/stdc++.h>
-using namespace std;
-int main(){
-	int m;cin>>m;cout<<m/1000;
+#include <iostream>
+
+int main()
+{
+  int m;
+  std::cin >> m;
+  std::cout << m / 1000;
 }
