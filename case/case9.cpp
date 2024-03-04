@@ -3,7 +3,9 @@
 int main()
 {
   int d, m;
+
   std::cin >> d >> m;
+
   switch (m)
   {
   case 1:
@@ -22,6 +24,8 @@ int main()
     {
       d = d + 1;
     }
+    break;
+
   case 4:
   case 6:
   case 9:
@@ -36,6 +40,7 @@ int main()
       d = d + 1;
     }
     break;
+
   case 2:
     if (d == 28)
     {
@@ -47,9 +52,11 @@ int main()
       d = d + 1;
     }
     break;
+
   default:
     std::cout << "error" << std::endl;
     break;
   }
+
   return 0;
 }
