@@ -1,6 +1,9 @@
-#include<bits/stdc++.h>
-using namespace std;
-int main(){
-	long double a;cin>>a;
-	cout<<floor(a/1024);
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+  long double a;
+  std::cin >> a;
+  std::cout << std::floor(a / 1024);
 }
