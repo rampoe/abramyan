@@ -21,7 +21,7 @@ int main()
     break;
 
   case 5:
-    std::cout << "pyatdesyat";
+    std::cout << "pyatdesyat ";
     break;
 
   case 6:
