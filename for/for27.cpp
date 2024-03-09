@@ -1,40 +1,33 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
+double factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
 
-int main()
-{
-    long double x;
-    long long int n;
-    
-    cout << "X = "; cin >> x;
-    cout << "N = "; cin >> n;
+double calculate_series_value(double X, int N) {
+    double result = 0;
 
-    long double s = x;
-
-    for (int i = 1; i <= n; i++)
-    {
-        long double u = 1;
-        long double d = 1;
-
-        for (int j = 2; j <= 2 * n; j += 2)
-        {
-            d *= j;
-        }
-        d *= 2 * n + 1;
-
-        for (int j = 1; j <= 2 * n - 1; j += 2)
-        {
-            u *= j;
-        }
-        u *= 2 * n + 1;
-
-        s += u / d;
+    for (int k = 0; k <= N; ++k) {
+        double term = factorial(2 * k - 1) * std::pow(X, 2 * k + 1) /
+                      (factorial(2 * k) * (2 * k + 1));
+        result += term;
     }
 
-    cout << s << endl;
-    cout << asin(x) << endl;
+    return result;
+}
+
+int main() {
+    double X;
+    int N;
+    std::cin >> X >> N;
+
+    double result = calculate_series_value(X, N);
+    std::cout << "Результат: " << result << std::endl;
 
     return 0;
 }
