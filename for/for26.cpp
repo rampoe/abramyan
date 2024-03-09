@@ -1,9 +1,10 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main() {
-    float x, s;
+    float x, s = 0;
     int n;
     cin >> x >> n;
     for (int i = 1; i <= n; i++) {
