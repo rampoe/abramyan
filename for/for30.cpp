@@ -15,7 +15,7 @@ int main()
     long double h = std::abs(b - a) / n;
     for (int i = 0; i <= n; i++)
     {
-        std::cout << a + i * h << " ";
+        std::cout << 1 - std::sin(a + i * h) << " ";
     }
     std::cout << std::endl;
     return 0;
