@@ -10,7 +10,7 @@ int main()
     std::cout << "K = ";
     unsigned long long int k = 0;
     std::cin >> k;
-    unsigned long long int output_sum = 0;
+    long double output_sum = 0;
     for (unsigned long long int i = 1; i <= n; i++)
     {
         output_sum += std::pow(i, k);
