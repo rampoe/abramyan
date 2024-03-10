@@ -1,38 +1,34 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
-
-double cos_approx(double x, int n) {
-  double result = 1.0;
-  double term = 1.0;
-  int sign = 1;
-
-  for (int i = 1; i <= n; i++) {
-    term *= x * x;
-    sign *= -1;
-    double factorial = 1.0;
-    for (int j = 1; j <= 2 * i; j++) {
-      factorial *= j;
+unsigned long long int factorial(unsigned long long int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
     }
-    result += sign * term / factorial;
-  }
-
-  return result;
+    unsigned long long int result = 1;
+    for (unsigned long long int i = 1; i <= n; i++)
+    {
+        result *= i;
+    }
+    return result;
 }
 
-int main() {
-  double x;
-  int n;
-
-  cout << "Введите x: ";
-  cin >> x;
-
-  cout << "Введите N: ";
-  cin >> n;
-
-  double cos_approx_value = cos_approx(x, n);
-  cout << "cos(" << x << ") ≈ " << cos_approx_value << endl;
-
-  return 0;
+int main()
+{
+    long double x;
+    std::cout << "X = ";
+    std::cin >> x;
+    unsigned long long int n;
+    std::cout << "N = ";
+    std::cin >> n;
+    long double output_sum = 0;
+    for (unsigned long long int i = 0; i <= n; i++)
+    {
+        output_sum += std::pow(-1, i) * std::pow(x, 2 * i) / factorial(2 * i);
+    }
+    std::cout << "Output: " << output_sum << std::endl;
+    std::cout << "cos(x) = " << std::cos(x) << std::endl;
+    return 0;
 }
