@@ -1,24 +1,31 @@
 #include <iostream>
 #include <cmath>
-using namespace std;
-float fact(int n)
+
+unsigned long long int factorial(unsigned long long int n)
 {
-    float p = 1;
-    for (int i = 1; i <= n; i++)
+    if (n == 0 || n == 1) return 1;
+    unsigned long long int result = 1;
+    for (unsigned long long int i = 1; i <= n; i++)
     {
-        p *= i;
+        result *= i;
     }
-    return p;
+    return result;
 }
+
 int main()
 {
-    float x, s;
-    int n;
-    cin >> x >> n;
-    for (int i = 0; i <= n; i++)
+    long double x = 0;
+    std::cout << "X = ";
+    std::cin >> x;
+    unsigned long long int n = 0;
+    std::cout << "N = ";
+    std::cin >> n;
+    long double output_sum = 0;
+    for (unsigned long long int i = 0; i <= n; i++)
     {
-        s += pow(x, i)/fact(i);
+        output_sum += std::pow(x, i) / factorial(i);
     }
-    cout << s << endl;
+    std::cout << "Output: " << output_sum << std::endl;
+    std::cout << "exp(x) = " << std::exp(x) << std::endl;
     return 0;
 }
