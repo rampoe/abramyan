@@ -1,33 +1,32 @@
 #include <iostream>
 #include <cmath>
 
-double factorial(int n) {
-    if (n == 0 || n == 1) {
-        return 1;
-    } else {
-        return n * factorial(n - 1);
+int main()
+{
+    long double x = 0;
+    std::cout << "X = ";
+    std::cin >> x;
+    unsigned long long int n = 0;
+    std::cout << "N  = ";
+    std::cin >> n;
+    long double output_sum = x;
+    for (unsigned long long int i = 1; i <= n; i++)
+    {
+        unsigned long long int up = 1;
+        for (unsigned long long int j = 1; j <= 2 * i - 1; j += 2)
+        {
+            up *= j;
+        }
+        up *= std::pow(x, 2 * i + 1);
+        unsigned long long int down = 1;
+        for (unsigned long long int j = 2; j <= 2* i; j += 2)
+        {
+            down *= j;
+        }
+        down *= 2 * i + 1;
+        output_sum += (long double)up / down;
     }
-}
-
-double calculate_series_value(double X, int N) {
-    double result = 0;
-
-    for (int k = 0; k <= N; ++k) {
-        double term = factorial(2 * k - 1) * std::pow(X, 2 * k + 1) /
-                      (factorial(2 * k) * (2 * k + 1));
-        result += term;
-    }
-
-    return result;
-}
-
-int main() {
-    double X;
-    int N;
-    std::cin >> X >> N;
-
-    double result = calculate_series_value(X, N);
-    std::cout << "Результат: " << result << std::endl;
-
+    std::cout << "Output: " << output_sum << std::endl;
+    std::cout << "arcsin(x) = " << std::asin(x) << std::endl;
     return 0;
 }
