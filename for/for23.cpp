@@ -1,35 +1,35 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
-
-long double fact(long long int n)
+unsigned long long int factorial(unsigned long long int n)
 {
-    long double p = 1;
-    for (int i = 1; i <= n; i++)
+    if (n == 0 || n == 1) return 1;
+    unsigned long long int result = 1;
+    for (unsigned long long int i = 1; i <= n; i++)
     {
-        p *= i;
+        result *= i;
     }
-    return p;
+    return result;
 }
 
 int main()
 {
-    long double x;
-    cout << "X = "; cin >> x;
+    long double x = 0;
+    std::cout << "X = ";
+    std::cin >> x;
 
-    long long int n;
-    cout << "N = "; cin >> n;
+    unsigned long long int n = 0;
+    std::cout << "N = ";
+    std::cin >> n;
 
-    long double s = x;
-
-    for (int i = 1; i <= n; i++)
+    long double output_sum = 0;
+    for (unsigned long long int i = 0; i <= n; i++)
     {
-        s += pow(-1, i) * pow(x, 2 * i + 1) / fact(2 * i + 1);
+        output_sum += std::pow(-1, i) * std::pow(x, 2 * i + 1) / factorial(2 * i + 1);
     }
 
-    cout << s << endl;
-    cout << "sin(x) = " << sin(x) << endl;
+    std::cout << "Output: " << output_sum << std::endl;
+    std::cout << "sin(x) = " << std::sin(x) << std::endl;
 
     return 0;
 }
