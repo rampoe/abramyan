@@ -12,6 +12,7 @@ int main()
     for (unsigned long long int i = n; i >= 1; i--)
     {
         output_sum += std::pow(counter, i);
+        counter++;
     }
     std::cout << "Output: " << output_sum << std::endl;
     std::system("pause");
