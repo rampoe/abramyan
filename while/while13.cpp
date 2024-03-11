@@ -6,12 +6,12 @@ int main()
     long double a = 0;
     std::cout << "A = ";
     std::cin >> a;
-    unsigned long long int k = 1;
+    unsigned long long int k = 0;
     long double current_sum = 0;
     while (current_sum <= a)
     {
-        current_sum += 1.0 / k;
         k++;
+        current_sum += 1.0 / k;
     }
     std::cout << "Output: " << std::endl
               << "sum: " << current_sum << std::endl
