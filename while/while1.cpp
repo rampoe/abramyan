@@ -9,7 +9,7 @@ int main()
     std::cout << "B = ";
     long double b = 0;
     std::cin >> b;
-    while (a > b)
+    while (a >= b)
     {
         a -= b;
     }
