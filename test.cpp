@@ -1,10 +1,8 @@
-#include <cmath>
+#include <cstdlib>
 #include <iostream>
-
-using namespace std;
 
 int main()
 {
-    cout << pow(-1, 0) << endl;
+    std::system("pause");
     return 0;
 }
