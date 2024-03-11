@@ -4,7 +4,7 @@
 int main()
 {
     std::system("chcp 1251");
-    unsigned long long int current_amount_of_money = 0;
+    unsigned long long int current_amount_of_money = 1000;
     long double p = 0;
     std::cout << "P = ";
     std::cin >> p;
