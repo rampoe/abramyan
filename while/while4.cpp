@@ -3,7 +3,7 @@
 
 int main()
 {
-    std::cout << "N: ";
+    std::cout << "N = ";
     unsigned long long int n = 0;
     std::cin >> n;
     bool flag = false;
