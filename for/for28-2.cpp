@@ -21,4 +21,6 @@ int main()
         rez += temp1 * pow / temp2;
     }
     cout << rez;
+
+    return 0;
 }
